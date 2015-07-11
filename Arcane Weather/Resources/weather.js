@@ -7,24 +7,20 @@ var wApi = {
 	forecast: "http://api.wunderground.com/api/a533683612fcf770/forecast/q/" + cords.lat + "," + cords.lon + ".json",
 };
 if (Ti.Network.online) {
-     var getWeather = Ti.Network.createHTTPClient();
-     getWeather.onload = function(e){
+     var getSunrise = Ti.Network.createHTTPClient();
+     getSunrise.onload = function(e){
          //console.log(e); 
          var json = JSON.parse(this.responseText);
-         var info = {
-        
+         var info = {  
            forecast : json.forecast,
            location : json.location,
-           sunrise : json.moon_phase
-           
+           sunrise : json.moon_phase          
         };
+        ui.bUi(info);
 console.log(info.sunrise.sunrise.hour);
      };
-     getWeather.open("GET", wApi.conditions);
-     getWeather.open("GET", wApi.forecast);
-     getWeather.open("GET", wApi.wAlerts);
-     getWeather.open("GET", wApi.sunriseSet);
-     getWeather.send();
+     getSunrise.open("GET", wApi.sunriseSet);
+     getSunrise.send();
 } else {
      alert("Network currently unavailable. Please check settings.");
      
