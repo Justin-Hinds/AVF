@@ -8,5 +8,8 @@ var view = Ti.UI.createView({
 	
 });
 win.add(view);
+
 var getGeo = require("geo").runGeoCode;
+var weath = require("weather");
+var net = require("netCheck");
  win.open();
