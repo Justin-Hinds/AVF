@@ -4,12 +4,13 @@ var wApi = {
 	conditions: "http://api.wunderground.com/api/a533683612fcf770/conditions/q/"+ cords.lat + "," + cords.lon + ".json",
 	wAlert: "http://api.wunderground.com/api/a533683612fcf770/alerts/q/IA/"+ cords.lat + "," + cords.lon + ".json",
 	sunriseSet: "http://api.wunderground.com/api/a533683612fcf770/astronomy/q/"+ cords.lat + "," + cords.lon + ".json",
-	forecast: "http://api.wunderground.com/api/a533683612fcf770/forecast/q/" + cords.lat + "," + cords.lon + ".json",
+	forecast: "http://api.wunderground.com/api/a533683612fcf770/forecast/geolookup/q/" + cords.lat + "," + cords.lon + ".json",
 };
 if (Ti.Network.online) {
-     var getSunrise = Ti.Network.createHTTPClient();
-     getSunrise.onload = function(e){
-         //console.log(e); 
+    
+      var getForecast = Ti.Network.createHTTPClient();
+     getForecast.onload = function(e){
+        
          var json = JSON.parse(this.responseText);
          var info = {  
            forecast : json.forecast,
@@ -17,10 +18,10 @@ if (Ti.Network.online) {
            sunrise : json.moon_phase          
         };
         ui.bUi(info);
-console.log(info.sunrise.sunrise.hour);
+//console.log(info.forecast);
      };
-     getSunrise.open("GET", wApi.sunriseSet);
-     getSunrise.send();
+     getForecast.open("GET", wApi.forecast);
+     getForecast.send();
 } else {
      alert("Network currently unavailable. Please check settings.");
      
