@@ -4,13 +4,12 @@ var win = Ti.UI.createWindow({
 	layout: "vertical"
 	
 });
-var bUi = function(info){
-
-	// could not get this for loop to work
-	
+//function for Weather cards
+var bUi = function(info){	
+	// loop for Weather cards
 	for(i = 0; i < info.forecast.simpleforecast.forecastday.length; i++){
 	var forecastView = Ti.UI.createView({
-		backgroundColor: "red",
+		backgroundColor: "aed6f0",
 		height: "20%", 
 		top: 20,
 		width: "80%",
@@ -22,25 +21,28 @@ var bUi = function(info){
 	 var currentCity = Ti.UI.createLabel({
 	 	text: info.location.city,
 	 	top: 10,
-	 	left: 15
+	 	left: 15,
+	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
 	 });
 	 var forecastDate =Ti.UI.createLabel({
 	 	text: info.forecast.simpleforecast.forecastday[i].date.weekday + " " + info.forecast.simpleforecast.forecastday[i].date.monthname + ", " + info.forecast.simpleforecast.forecastday[i].date.day,
-	 	top: -40,
+	 	top: 5,
 	 	left: 15
 	 });
 	  var forecastCondition =Ti.UI.createLabel({
-	  	text: info.forecast.simpleforecast.forecastday[i].conditions,
-	  	top: -5,
-	  	right: 15
+	  	text: "Conditions " + info.forecast.simpleforecast.forecastday[i].conditions,
+	  	top: 5,
+	  	left: 15,
+	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
 	  });
 	  var forecastTemp =Ti.UI.createLabel({
 	  	text:"Low " + info.forecast.simpleforecast.forecastday[i].low.fahrenheit + " " + "High " + info.forecast.simpleforecast.forecastday[i].high.fahrenheit,
-	  	top: -5,
-	  	right: 15
+	  	top: 5,
+	  	left: 15,
+	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
 	  });
 	 win.add(forecastView);
-forecastView.add( currentCity, forecastTemp, forecastCondition, forecastDate );
+forecastView.add( currentCity, forecastDate, forecastTemp, forecastCondition );
  console.log(info.location.city);
 console.log(info.forecast.simpleforecast.forecastday[i].date.weekday + " " + info.forecast.simpleforecast.forecastday[i].date.monthname + ", " + info.forecast.simpleforecast.forecastday[i].date.day);
 console.log(info.forecast.simpleforecast.forecastday[i].conditions);

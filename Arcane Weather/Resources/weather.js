@@ -1,4 +1,5 @@
 var weatherInfo = function(cords){
+// poor setUp for variables, didn't have time to clean up
 var wApi = {
 	geoLook: "http://api.wunderground.com/api/a533683612fcf770/geolookup/q/" + cords.lat + "," + cords.lon + ".json",
 	conditions: "http://api.wunderground.com/api/a533683612fcf770/conditions/q/"+ cords.lat + "," + cords.lon + ".json",
@@ -6,6 +7,7 @@ var wApi = {
 	sunriseSet: "http://api.wunderground.com/api/a533683612fcf770/astronomy/q/"+ cords.lat + "," + cords.lon + ".json",
 	forecast: "http://api.wunderground.com/api/a533683612fcf770/forecast/geolookup/q/" + cords.lat + "," + cords.lon + ".json",
 };
+// network check and HTTPClient
 if (Ti.Network.online) {
     
       var getForecast = Ti.Network.createHTTPClient();

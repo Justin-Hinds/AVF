@@ -1,3 +1,4 @@
+// function to get location
 var runGeo = function(){
 	Ti.Geolocation.purpose = " "; 
 	Ti.Geolocation.getCurrentPosition(function(e){
