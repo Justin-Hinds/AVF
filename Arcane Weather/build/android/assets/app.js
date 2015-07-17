@@ -1,1 +1,0 @@
-var weath=require("weather"),getGeo=require("geo").runGeoCode,net=require("netCheck"),ui=require("ui");

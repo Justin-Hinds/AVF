@@ -8,9 +8,9 @@ var fFont;
 var cFont;
 //function for Weather cards
 var bUi = function(info){	
-
+console.log(info);
 	 var currentLoca = Ti.UI.createLabel({
-	 	text: info.city + ", " + info.state
+	 	text: info.city + ", " + info.state,
 	 	top: 10,
 	 	left: 15,
 	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
@@ -47,7 +47,7 @@ var bUi = function(info){
 		viewShadowColor: "373737",
 		viewShadowRadius: 6,
 		viewShadowOffset:(-5,-10),
-		layout: "vertical"
+		layout: "horizontal"
 	 });
 	  var currentView = Ti.UI.createView({
 		backgroundColor: "aed6f0",
@@ -70,28 +70,27 @@ var bUi = function(info){
 		viewShadowOffset:(-5,-10),
 		//layout: "vertical"
 	 });
-	 currentView.add(currentLoca, winds, precip, temp,currentImage)
+	 currentView.add(currentLoca, winds, precip, temp,currentImage,condtionsC);
 		// loop for Weather card
 	for(i = 0; i < 5; i++){
-var forecastDay =Ti.UI.createLabel({
+		var forecastDay =Ti.UI.createLabel({
 	 	text: info.forecast[i].day,
 	 	top: 5,
 	 	left: 15
 	 });
-	 
-	  var forecastHi =Ti.UI.createLabel({
+		var forecastHi =Ti.UI.createLabel({
 	  	text:"High: " + info.forecaste[i].hi,
 	  	top: 5,
 	  	left: 15,
 	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
 	  });
-	    var forecastlo =Ti.UI.createLabel({
+		var forecastlo =Ti.UI.createLabel({
 	  	text:"Low: " + info.forecaste[i].lo ,
 	  	top: 5,
 	  	left: 15,
 	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
 	  });
-	  var forecastImage = Ti.UI.createImageView({
+		var forecastImage = Ti.UI.createImageView({
 		backgroundColor: "aed6f0",
 		image: info.forecast[i].icon,
 		height: "20%", 
@@ -102,7 +101,7 @@ var forecastDay =Ti.UI.createLabel({
 		viewShadowOffset:(-5,-10),
 		//layout: "vertical"
 	 });
-	 var forecastTextView = Ti.UI.createView({
+		var forecastTextView = Ti.UI.createView({
 		backgroundColor: "aed6f0",
 		height: "15%", 
 		top: 20,
@@ -117,13 +116,10 @@ var forecastDay =Ti.UI.createLabel({
 	 forecastTextView.add(forecastDay, forecastImage, forecastHi, forecastlo);
 	 forecastView.add(forecastTextView);
 forecastView.add( currentCity, forecastDate, forecastTemp, forecastCondition );
-//console.log(info.location.city);
-//console.log(info.forecast.simpleforecast.forecastday[i].date.weekday + " " + info.forecast.simpleforecast.forecastday[i].date.monthname + ", " + info.forecast.simpleforecast.forecastday[i].date.day);
-//console.log(info.forecast.simpleforecast.forecastday[i].conditions);
-//console.log("Low " + info.forecast.simpleforecast.forecastday[i].low.fahrenheit + " " + "High " + info.forecast.simpleforecast.forecastday[i].high.fahrenheit);
+
  };
  	
-
+win.add(forecastView, currentView);
 	
 
 

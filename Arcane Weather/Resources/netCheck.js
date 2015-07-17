@@ -29,7 +29,7 @@ if (Ti.Network.online) {
   };
         info.forecast = tenDay;
         weath.save(info);
-console.log(info.current);
+console.log(info.city);
      };
      getData.open("GET", url);
      getData.send();
