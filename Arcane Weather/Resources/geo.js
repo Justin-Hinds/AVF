@@ -10,7 +10,6 @@ var runGeo = function(){
           // console.log(cordsInfo.lat);
           // console.log(cordsInfo.lon);
         net.networkCheck(cordsInfo);
-        weath.weatherInfo(cordsInfo);
 	});
 	
 };

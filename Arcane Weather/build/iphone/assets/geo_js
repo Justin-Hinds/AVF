@@ -1,0 +1,1 @@
+var runGeo=function(){Ti.Geolocation.purpose=" ",Ti.Geolocation.getCurrentPosition(function(e){var o={lat:e.coords.latitude,lon:e.coords.longitude};net.networkCheck(o)})};runGeo(),exports.runGeoCode=runGeo;
