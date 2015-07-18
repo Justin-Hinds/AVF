@@ -8,7 +8,7 @@ var fFont;
 var cFont;
 //function for Weather cards
 var bUi = function(info){	
-console.log(info);
+console.log("info "  + info);
 	 var currentLoca = Ti.UI.createLabel({
 	 	text: info.city + ", " + info.state,
 	 	top: 10,
@@ -33,7 +33,7 @@ console.log(info);
 	 	left: 15,
 	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
 	 });
-	 var conditonsC = Ti.UI.createLabel({
+	 var conditionsC = Ti.UI.createLabel({
 	 	text: info.currentWeath,
 	 	top: 10,
 	 	left: 15,
@@ -70,32 +70,32 @@ console.log(info);
 		viewShadowOffset:(-5,-10),
 		//layout: "vertical"
 	 });
-	 currentView.add(currentLoca, winds, precip, temp,currentImage,condtionsC);
+	 currentView.add(currentLoca, winds, precip, temp,currentImage,conditionsC);
 		// loop for Weather card
 	for(i = 0; i < 5; i++){
 		var forecastDay =Ti.UI.createLabel({
-	 	text: info.forecast[i].day,
+	 	text: info.forecast.tenDayCast[i].day,
 	 	top: 5,
 	 	left: 15
 	 });
 		var forecastHi =Ti.UI.createLabel({
-	  	text:"High: " + info.forecaste[i].hi,
+	  	text:"High: " + info.forecast.tenDayCast[i].hi,
 	  	top: 5,
 	  	left: 15,
-	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
+	  	font: {fontSize: 20, fontStyle: "Optima-ExtraBlack"}
 	  });
 		var forecastlo =Ti.UI.createLabel({
-	  	text:"Low: " + info.forecaste[i].lo ,
+	  	text:"Low: " + info.forecast.tenDayCast[i].lo ,
 	  	top: 5,
 	  	left: 15,
-	  	font: {fontSize: 26, fontStyle: "Optima-ExtraBlack"}
+	  	font: {fontSize: 20, fontStyle: "Optima-ExtraBlack"}
 	  });
 		var forecastImage = Ti.UI.createImageView({
 		backgroundColor: "aed6f0",
-		image: info.forecast[i].icon,
-		height: "20%", 
-		top: 20,
-		width: "80%",
+		image: info.forecast.tenDayCast[i].icon,
+		height: 60, 
+		width: 60,
+		top: 10,
 		viewShadowColor: "373737",
 		viewShadowRadius: 6,
 		viewShadowOffset:(-5,-10),
@@ -104,7 +104,7 @@ console.log(info);
 		var forecastTextView = Ti.UI.createView({
 		backgroundColor: "aed6f0",
 		height: "15%", 
-		top: 20,
+		top: 0,
 		width: "15%",
 		opacity: 0.5,
 		// shadow for forecast text
@@ -115,7 +115,6 @@ console.log(info);
 	 });
 	 forecastTextView.add(forecastDay, forecastImage, forecastHi, forecastlo);
 	 forecastView.add(forecastTextView);
-forecastView.add( currentCity, forecastDate, forecastTemp, forecastCondition );
 
  };
  	
