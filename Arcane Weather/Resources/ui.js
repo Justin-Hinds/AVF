@@ -8,7 +8,6 @@ var fFont;
 var cFont;
 //function for Weather cards
 var bUi = function(info){	
-console.log("info "  + info);
 	 var currentLoca = Ti.UI.createLabel({
 	 	text: info.city + ", " + info.state,
 	 	top: 10,
@@ -16,27 +15,27 @@ console.log("info "  + info);
 	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
 	 });
 	 var winds = Ti.UI.createLabel({
-	 	text: info.currentWinds,
+	 	text: "Winds: " + info.currentWinds,
 	 	top: 10,
-	 	left: 15,
-	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
+	 	right:180,
+	 	font: { fontSize: 24, fontFamily: "Futura-Medium"},
 	 });
 	 var precip = Ti.UI.createLabel({
-	 	text: info.currentPrecip,
+	 	text: "Precip: " + info.currentPrecip + "%",
 	 	top: 10,
-	 	left: 15,
-	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
+	 	right: 15,
+	 	font: { fontSize: 24, fontFamily: "Futura-Medium"},
 	 });
 	 var temp = Ti.UI.createLabel({
-	 	text: info.currentTemp,
-	 	top: 10,
-	 	left: 15,
-	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
+	 	text: info.currentTemp + "°",
+	 	top: 70,
+	 	left: 50,
+	 	font: { fontSize: 60, fontFamily: "Futura-Medium"},
 	 });
 	 var conditionsC = Ti.UI.createLabel({
 	 	text: info.currentWeath,
-	 	top: 10,
-	 	left: 15,
+	 	bottom: 20,
+	 	left: 45,
 	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
 	 });
 	 var forecastView = Ti.UI.createView({
@@ -57,14 +56,15 @@ console.log("info "  + info);
 		viewShadowColor: "373737",
 		viewShadowRadius: 6,
 		viewShadowOffset:(-5,-10),
-		//layout: "vertical"
+		
 	 });
 	 var currentImage = Ti.UI.createImageView({
 		backgroundColor: "aed6f0",
 		image: info.currentIcon,
-		height: "20%", 
-		top: 20,
-		width: "80%",
+		height: 80, 
+		top: 70,
+		left: 130,
+		width: 80,
 		viewShadowColor: "373737",
 		viewShadowRadius: 6,
 		viewShadowOffset:(-5,-10),
@@ -79,13 +79,13 @@ console.log("info "  + info);
 	 	left: 15
 	 });
 		var forecastHi =Ti.UI.createLabel({
-	  	text:"High: " + info.forecast.tenDayCast[i].hi,
+	  	text:"High: " + info.forecast.tenDayCast[i].hi + "°",
 	  	top: 5,
 	  	left: 15,
 	  	font: {fontSize: 20, fontStyle: "Optima-ExtraBlack"}
 	  });
 		var forecastlo =Ti.UI.createLabel({
-	  	text:"Low: " + info.forecast.tenDayCast[i].lo ,
+	  	text:"Low: " + info.forecast.tenDayCast[i].lo + "°" ,
 	  	top: 5,
 	  	left: 15,
 	  	font: {fontSize: 20, fontStyle: "Optima-ExtraBlack"}
@@ -118,7 +118,7 @@ console.log("info "  + info);
 
  };
  	
-win.add(forecastView, currentView);
+win.add(currentView, forecastView );
 	
 
 
