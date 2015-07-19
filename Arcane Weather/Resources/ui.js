@@ -15,7 +15,7 @@ var bUi = function(info){
 	 	font: { fontSize: 34, fontFamily: "Futura-Medium"},
 	 });
 	 var winds = Ti.UI.createLabel({
-	 	text: "Winds: " + info.currentWinds,
+	 	text: "Winds: " + info.currentWinds + "mph",
 	 	top: 10,
 	 	right:180,
 	 	font: { fontSize: 24, fontFamily: "Futura-Medium"},
@@ -59,11 +59,12 @@ var bUi = function(info){
 		
 	 });
 	 var currentImage = Ti.UI.createImageView({
-		backgroundColor: "aed6f0",
+		backgroundColor: "white",
 		image: info.currentIcon,
 		height: 80, 
+		opacity: 0.5,
 		top: 70,
-		left: 130,
+		alighn: "center",
 		width: 80,
 		viewShadowColor: "373737",
 		viewShadowRadius: 6,
@@ -75,7 +76,8 @@ var bUi = function(info){
 	for(i = 0; i < 5; i++){
 		var forecastDay =Ti.UI.createLabel({
 	 	text: info.forecast.tenDayCast[i].day,
-	 	top: 5,
+	 	align: "center",
+	 	top: 10,
 	 	left: 15
 	 });
 		var forecastHi =Ti.UI.createLabel({
@@ -86,12 +88,12 @@ var bUi = function(info){
 	  });
 		var forecastlo =Ti.UI.createLabel({
 	  	text:"Low: " + info.forecast.tenDayCast[i].lo + "°" ,
-	  	top: 5,
+	  	top: 0,
 	  	left: 15,
 	  	font: {fontSize: 20, fontStyle: "Optima-ExtraBlack"}
 	  });
 		var forecastImage = Ti.UI.createImageView({
-		backgroundColor: "aed6f0",
+		backgroundColor: "white",
 		image: info.forecast.tenDayCast[i].icon,
 		height: 60, 
 		width: 60,
@@ -102,9 +104,10 @@ var bUi = function(info){
 		//layout: "vertical"
 	 });
 		var forecastTextView = Ti.UI.createView({
-		backgroundColor: "aed6f0",
+		backgroundColor: "white",
 		height: "15%", 
 		top: 0,
+		left: "4%",
 		width: "15%",
 		opacity: 0.5,
 		// shadow for forecast text

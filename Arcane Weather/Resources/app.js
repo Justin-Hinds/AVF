@@ -9,7 +9,9 @@ var networkCheck = function(cords){
 var url = "http://api.wunderground.com/api/a533683612fcf770/forecast10day/geolookup/conditions/q/" + cords.lat + "," + cords.lon + ".json";
 if (Ti.Network.online) {
      var getData = Ti.Network.createHTTPClient({
+     	timeout: 10000
      });
+     
      getData.onload = function(e){
          
           var json = JSON.parse(this.responseText); 
@@ -18,7 +20,7 @@ if (Ti.Network.online) {
            state : json.location.state,    
          currentWeat: json.current_observation.weather,  
          currentTemp: json.current_observation.temp_f,
-         currentWinds: json.current_observation.wind_string,
+         currentWinds: json.current_observation.wind_mph,
          currentPrecip: json.current_observation.precip_today_metric,
          currentIcon: json.current_observation.icon_url
         };;

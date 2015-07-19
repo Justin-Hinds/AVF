@@ -1,0 +1,7 @@
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/com/arcaneweather/ApplicationStylesheet.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/com/arcaneweather/ArcaneWeatherActivity.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/com/arcaneweather/ArcaneWeatherAppInfo.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/com/arcaneweather/ArcaneWeatherApplication.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/com/arcaneweather/R.java"
+"/Users/ChefZatoichi/Documents/AVF/Arcane Weather/build/android/gen/ti/modules/titanium/ui/R.java"
