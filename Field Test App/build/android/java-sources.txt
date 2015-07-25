@@ -1,0 +1,7 @@
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/android/support/v7/appcompat/R.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/com/arcane/fieldTestApp/ApplicationStylesheet.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/com/arcane/fieldTestApp/FieldTestAppActivity.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/com/arcane/fieldTestApp/FieldTestAppAppInfo.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/com/arcane/fieldTestApp/FieldTestAppApplication.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/com/arcane/fieldTestApp/R.java"
+"/Users/ChefZatoichi/Documents/AVF/Field Test App/build/android/gen/ti/modules/titanium/ui/R.java"

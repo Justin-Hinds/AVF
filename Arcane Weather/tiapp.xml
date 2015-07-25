@@ -1,63 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.arcaneweather</id>
-    <name>Arcane Weather</name>
-    <version>1.0</version>
-    <publisher>ChefZatoichi</publisher>
-    <url>http://</url>
-    <description>undefined</description>
-    <copyright>2015 by ChefZatoichi</copyright>
-    <icon>appicon.png</icon>
-    <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
-    <analytics>true</analytics>
-    <guid>aec4ce3a-567e-45a4-bdeb-efd5c69617ee</guid>
-    <property name="ti.ui.defaultunit" type="string">dp</property>
-    <ios>
-        <plist>
-            <dict>
-                <key>NSLocationAlwaysUsageDescription</key>
-                <array>
-                    <string>Please allow the app to access your Location to provide accurate weather reports.</string>
-                </array>
-                <key>UISupportedInterfaceOrientations~iphone</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                </array>
-                <key>UISupportedInterfaceOrientations~ipad</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
-                    <string>UIInterfaceOrientationLandscapeLeft</string>
-                    <string>UIInterfaceOrientationLandscapeRight</string>
-                </array>
-                <key>UIRequiresPersistentWiFi</key>
-                <false/>
-                <key>UIPrerenderedIcon</key>
-                <false/>
-                <key>UIStatusBarHidden</key>
-                <false/>
-                <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
-            </dict>
-        </plist>
-    </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <id>com.arcaneweather</id>
+  <name>Arcane Weather</name>
+  <version>1.0</version>
+  <publisher>ChefZatoichi</publisher>
+  <url>http://</url>
+  <description>undefined</description>
+  <copyright>2015 by ChefZatoichi</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>true</analytics>
+  <guid>d3bb087f-a31d-413a-9ccc-c884fac096c0</guid>
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <ios>
+    <plist>
+      <dict>
+        <key>NSLocationAlwaysUsageDescription</key>
+        <array>
+          <string>Please allow the app to access your Location to provide accurate weather reports.</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleDefault</string>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
     <mobileweb>
-        <precache/>
-        <splash>
-            <enabled>true</enabled>
-            <inline-css-images>true</inline-css-images>
-        </splash>
-        <theme>default</theme>
+      <precache/>
+      <splash>
+        <enabled>true</enabled>
+        <inline-css-images>true</inline-css-images>
+      </splash>
+      <theme>default</theme>
     </mobileweb>
     <modules/>
     <deployment-targets>
-        <target device="android">true</target>
-        <target device="blackberry">false</target>
-        <target device="ipad">true</target>
-        <target device="iphone">true</target>
-        <target device="mobileweb">true</target>
+      <target device="android">true</target>
+      <target device="blackberry">false</target>
+      <target device="ipad">true</target>
+      <target device="iphone">true</target>
+      <target device="mobileweb">true</target>
     </deployment-targets>
     <sdk-version>3.5.1.GA</sdk-version>
-</ti:app>
+    <property name="appc-app-id" type="string">55b2a87c754e31ca156fb57e</property>
+  </ti:app>

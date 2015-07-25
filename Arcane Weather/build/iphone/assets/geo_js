@@ -1,1 +1,0 @@
-var runGeo=function(){if(Ti.Geolocation.purpose=" ","android"===Ti.Platform.osname);else Ti.Geolocation.getCurrentPosition(function(e){var r={lat:e.coords.latitude,lon:e.coords.longitude};networkCheck(r)})};runGeo(),exports.runGeoCode=runGeo;
