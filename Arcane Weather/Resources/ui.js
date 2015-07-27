@@ -8,6 +8,7 @@ var fFont;
 var cFont;
 //function for Weather cards
 var bUi = function(info){	
+	console.log("cords =" + info);
 	 var currentLoca = Ti.UI.createLabel({
 	 	text: info.city + ", " + info.state,
 	 	top: 10,
@@ -116,12 +117,16 @@ var bUi = function(info){
 		viewShadowOffset:(-5,-10),
 		layout: "vertical"
 	 });
-	 forecastTextView.add(forecastDay, forecastImage, forecastHi, forecastlo);
+	 forecastTextView.add(forecastDay);
+	 forecastTextView.add(forecastImage);
+	 forecastTextView.add(forecastHi);
+	 forecastTextView.add(forecastlo);
 	 forecastView.add(forecastTextView);
 
  };
  	
-win.add(currentView, forecastView );
+win.add(currentView);
+win.add(forecastView);
 	
 
 

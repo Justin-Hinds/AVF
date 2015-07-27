@@ -1,1 +1,1 @@
-/Users/ChefZatoichi/Documents/AVF/Arcane Weather/Resources/geo.js
+var runGeo=function(){Ti.Geolocation.purpose=" ",Ti.Geolocation.getCurrentPosition(function(e){"android"===Ti.Platform.osname&&(Ti.Geolocation.accuracy="ACCURACY_HIGH");var o={lat:e.coords.latitude,lon:e.coords.longitude};net.netCheck(o)})};runGeo(),exports.runGeoCode=runGeo;

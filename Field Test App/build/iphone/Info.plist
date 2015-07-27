@@ -45,6 +45,10 @@
 	<false/>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDefault</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<array>
+		<string>Please allow the app to access your Location to provide accurate weather reports.</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~iphone</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

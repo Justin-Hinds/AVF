@@ -36,6 +36,7 @@ console.log(cords);
     
      	onerror: function(e){
     alert("There is a problem retrieving current data. Please check your network settings.");
+    read();
      	},
      	timeout: 10000
      });

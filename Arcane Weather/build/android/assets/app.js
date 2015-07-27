@@ -1,1 +1,1 @@
-/Users/ChefZatoichi/Documents/AVF/Arcane Weather/Resources/app.js
+var weath=require("weather").save,getGeo=require("geo").runGeoCode,net=require("netCheck"),ui=require("ui");

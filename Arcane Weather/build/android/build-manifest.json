@@ -1,6 +1,6 @@
 {
-	"target": "emulator",
-	"deployType": "development",
+	"target": "device",
+	"deployType": "test",
 	"classname": "ArcaneWeather",
 	"platformPath": "/Users/ChefZatoichi/Library/Application Support/Titanium/mobilesdk/osx/3.5.1.GA/android",
 	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
@@ -19,14 +19,14 @@
 	"guid": "d3bb087f-a31d-413a-9ccc-c884fac096c0",
 	"icon": "appicon.png",
 	"fullscreen": false,
-	"skipJSMinification": true,
+	"skipJSMinification": false,
 	"mergeCustomAndroidManifest": false,
 	"encryptJS": true,
 	"minSDK": 10,
 	"targetSDK": 21,
-	"propertiesHash": "3a2307acb711984adc20e49e91a78014",
+	"propertiesHash": "289a148351f667b9f555678186a5ea96",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"jssFilesHash": "d41d8cd98f00b204e9800998ecf8427e",
-	"jarLibHash": "2e1c8749c46400d513376299b24599a3"
+	"jarLibHash": "8474163bdc31598631542652254a35d3"
 }
