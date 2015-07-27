@@ -7,7 +7,7 @@ var local = require("local");
 		var arrowDB = require("arrowDB");
 		arrowDB.loginUser();
 	}else{
-		
+		alert("cloud failed");
 	};
 
 

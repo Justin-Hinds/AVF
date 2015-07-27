@@ -3,7 +3,6 @@ var read = function(){
 	var rowData = db.execute("SELECT name, phone, address, city, state, postalCode, distance FROM venueTBL");
 		var rowCount = rowData.rowCount;
 		var apiArray = [];
-		console.log(rowCount);
 		while(rowData.isValidRow()){
 		var dbD = {
 			name: rowData.fieldByName("name"),
@@ -17,6 +16,8 @@ var read = function(){
 			apiArray.push(dbD);
 			rowData.next();
 		};
+	console.log("dbD: "+ dbD);
+	console.log("array: "+ apiArray);
 		rowData.close;
 		db.close;
 		ui.bUi(dbD);
@@ -26,7 +27,7 @@ var save = function(venIn){
 	
 	var db = Ti.Database.open("venueData");
 
-	db.execute("CREATE TABLE IF NOT EXISTS venueTBL(id INTEGER PRIMARY KEY, name TEXT, phone TEXT, address TEXT, distance TEXT) ");
+	db.execute("CREATE TABLE IF NOT EXISTS venueTBL(id INTEGER PRIMARY KEY, name TEXT, phone TEXT, address TEXT, city TEXT, state TEXT, postalCode TEXT, distance TEXT) ");
 	for(i=0; i <5; i++){
 		db.execute("INSERT INTO venueTBL (name, phone, address, city, state, postalCode, distance) VALUES(?,?,?,?,?,?,?)",venIn[i].name, venIn[i].phone, venIn[i].address, venIn[i].city, venIn[i].state, venIn[i].postalCode, venIn[i].distance  );
 	};

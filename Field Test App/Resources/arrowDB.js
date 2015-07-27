@@ -20,11 +20,14 @@ var loginUser = function(){
 // Cloud save function
 var save = function(apiArray){
 	for(i= 0; i< apiArray.length; i++){
-		Cloud.objects.create({
+		Cloud.Objects.create({
 			classname: "venues",
 			fields:{
 				name:apiArray[i].name,
 				address:apiArray[i].address,
+				city: apiArray[i].city,
+				state: apiArray[i].state,
+				postalCode: apiArray[i].postalCode,
 				phone:apiArray[i].phone
 			}
 		}, function(e){

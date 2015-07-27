@@ -12,6 +12,8 @@ var venWin = Ti.UI.createWindow({
 });
 var venView = Ti.UI.createScrollView({
 	top: 40,
+	height: 60,
+	backgroundColor: "blue",
 	layout:"vertical",
 	showVerticalScrollIndicator: "true",
 	backgroundColor: "d3d3d3"
@@ -19,9 +21,15 @@ var venView = Ti.UI.createScrollView({
 venView.addEventListener("click", function(e){
 	getFinish(e.source);
 });
+var bUi = function(dbInfo){
+	for(var i=0; i< dbInfo.length; i++){
+		venWin.add(venView);
+	}
+};
 //loop for scroll view 
-var searchRes = function(api){
-	for(var i=0; i< api.length; i++){
+var searchRes = function(apiData){
+	console.log("Api:" + apiData);
+	for(var i=0; i< apiData.length; i++){
 		var view = Ti.UI.createView({
 			top: 10,
 			height: 80,
@@ -47,7 +55,7 @@ var searchRes = function(api){
 var query;
 // search bar
 var search = Ti.UI.createView({
-	top: 0, 
+	top: 30, 
 	height: 40,
 	viewShadowColor: "373737",
 	viewShadowRadius: 6,
@@ -138,7 +146,9 @@ loginWin.add(loginLabel);
 loginWin.add(userLabel);
 loginWin.add(passLabel);
 loginWin.open();
+search.add(searchText);
 win.add(search);
-win.add(searchText);
+
 
 exports.searchRes = searchRes;
+exports.bUi = bUi;

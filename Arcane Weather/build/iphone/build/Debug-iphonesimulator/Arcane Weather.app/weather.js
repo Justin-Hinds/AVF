@@ -1,1 +1,0 @@
-/Users/ChefZatoichi/Documents/AVF/Arcane Weather/Resources/weather.js
